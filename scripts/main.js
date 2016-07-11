@@ -9,21 +9,23 @@ sum(2,8)
 console.log('Question 2');
 function isEqual(x,y){
   if(x ===y){
-    console.log(true);
+    return true;
   }else {
-    console.log(false);
+    return false;
   }
 }
- isEqual(5,4)
+ console.log(isEqual(5,4))
+ console.log(isEqual(3,3));
 
 //3
 console.log('Question 3');
+
 function discountPercent(original, discount){
-  discount = discount*.01
-  var discountAmmount =  original*discount
-  console.log(discountAmmount);
+  if(0<discount<100){
+    return original*(discount*.01)
+  }
 }
-discountPercent(150,12)
+console.log(discountPercent(150,12))
 
 //4
 console.log('Question 4');
@@ -36,9 +38,9 @@ function stringCapitalize(string){
     string[i] = string[i] + secHalf
   }
   string = string.join(' ')
-  console.log(string);
+  return string;
 }
-stringCapitalize('please excuse my dear aunt sally')
+console.log(stringCapitalize('please excuse my dear aunt sally'));
 
 
 //5
@@ -46,23 +48,23 @@ console.log('Question 5');
 function evenNumbers(x){
   if(0<x<100){
     for(i=0; i<=x;i+=2){
-      console.log(i);
+      return i;
     }
   }
 }
 
-evenNumbers(21)
+console.log(evenNumbers(21));
 
 //6
 console.log('Question 6');
 function isDiviible(x,y){
   if(x%y === 0){
-    console.log(true);
+    return true;
   }else{
-    console.log(false);
+    return false;
   }
 }
-isDiviible(14,3)
+console.log(isDiviible(14,3));
 
 //bonus
 console.log('Bonus');
